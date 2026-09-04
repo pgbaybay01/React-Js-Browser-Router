@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <!-- Set the theme before first paint so there is no flash of the wrong
+         one. Must stay a plain blocking script: a module would be deferred. -->
+    <script>
+      (function () {
+        try {
+          var s = localStorage.getItem('theme');
+          var t =
+            s === 'light' || s === 'dark'
+              ? s
+              : window.matchMedia('(prefers-color-scheme: dark)').matches
+                ? 'dark'
+                : 'light';
+          document.documentElement.setAttribute('data-theme', t);
+          document.documentElement.style.colorScheme = t;
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light');
+        }
+      })();
+    </script>
+    <title>Northbound — Studio</title>
+    <meta
+      name="description"
+      content="A small studio building fast, accessible web products with React."
+    />
+    <script type="module" crossorigin src="/assets/index-bTP9bVI7.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BjNsJqw5.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>

@@ -1,0 +1,12 @@
+/* A wider track than the other grids: these cards carry a description and a
+   tag row, so 2-up on desktop reads better than 4-up. */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
+  gap: var(--space-4);
+}
+
+.portfolio-tags {
+  margin-top: auto;
+  padding-top: var(--space-2);
+}

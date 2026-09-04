@@ -1,0 +1,16 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr));
+  gap: var(--space-4);
+}
+
+.service-card {
+  align-items: flex-start;
+}
+
+/* Pins the link to the bottom so cards of differing copy length still
+   align their calls to action. */
+.service-link {
+  margin-top: auto;
+  padding-top: var(--space-2);
+}

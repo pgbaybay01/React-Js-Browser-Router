@@ -1,0 +1,35 @@
+/* Constrain the lines, not the section — so the hero stays left-aligned
+   with every other page rather than centring itself in the container. */
+.hero {
+  padding-block: var(--space-4) var(--space-9);
+}
+
+.hero-title {
+  margin-top: var(--space-4);
+  max-width: 18ch;
+  font-size: var(--text-4xl);
+}
+
+.hero-sub {
+  margin-top: var(--space-5);
+  max-width: 46ch;
+  font-size: var(--text-lg);
+  line-height: var(--leading-snug);
+  color: var(--text-secondary);
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+/* auto-fit takes this from 1 to 2 to 3 columns with no media query.
+   The min() guard is required — minmax(16rem, 1fr) alone overflows
+   below 256px plus gutters. */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+  gap: var(--space-4);
+}
